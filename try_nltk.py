@@ -22,9 +22,9 @@ nltk.download('vader_lexicon')
 
 # List of file paths
 file_paths = [
-    'Independent_Study_Codebase/reviewBarbie1.txt',
-    'Independent_Study_Codebase/reviewBarbie2.txt',
-    'Independent_Study_Codebase/reviewBarbie3.txt'
+    'reviewBarbie1.txt',
+    'reviewBarbie2.txt',
+    'reviewBarbie3.txt'
 ]
 
 for file_path in file_paths:
@@ -40,7 +40,7 @@ for file_path in file_paths:
 
     # NRCLex Emotion Analysis for detailed emotion analysis
     text_object = NRCLex(data)
-    emotion_scores = text_object.affect_frequencies  # This already uses frequency counting
+    emotion_scores = text_object.affect_frequencies  # This uses frequency counting
     print(f"Emotion scores (NRCLex) for {file_path}:", emotion_scores)
 
     # Print a newline for better readability between files
